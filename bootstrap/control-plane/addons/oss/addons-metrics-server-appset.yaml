@@ -37,6 +37,13 @@ spec:
                   environment: prod
               values:
                 addonChartVersion: 3.12.0
+          - clusters:
+              selector:
+                matchLabels:
+                  environment: management
+              values:
+                addonChartVersion: 3.12.0
+                addonChartNamespace: metrics-server
   template:
     metadata:
       name: addon-{{name}}-{{values.addonChart}}
